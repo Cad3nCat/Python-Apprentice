@@ -35,13 +35,13 @@ screen.setup(width=600, height=600)
 t = turtle.Turtle()
 
 set_turtle_image(t, 'leaguebot_bolt.gif')
-t.shapesize(10,10)
+t.shapesize(1,1)
 
 t.speed(3)
 
 
 t.pendown
 
-for i in range(4):
-    t.forward(200)
+for i in range(6):
+    t.forward(100)
     t.left(360/6)
