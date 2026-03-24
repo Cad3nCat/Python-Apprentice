@@ -41,7 +41,7 @@ if age >= 0 and age < 3 :
 elif age >= 3 and age < 5:
     print("You are a toddler")
 elif age == 9:
-    print("You are awsome")
+    ("You are awsome")
 elif age >= 6 and age < 12:
     print("You are a child")
 elif age >= 13 and age < 19:
