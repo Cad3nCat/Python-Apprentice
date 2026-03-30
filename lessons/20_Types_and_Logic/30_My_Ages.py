@@ -37,19 +37,19 @@ age = simpledialog.askinteger("Your Age", "How old are you?")
 # Use if statements to determine the age group
 # and create a message
 if age >= 0 and age < 3 :
-    print("You are a baby")
+    messagebox.showinfo(" ","You are a baby")
 elif age >= 3 and age < 5:
-    print("You are a toddler")
+    messagebox.showinfo(" ","You are a toddler")
 elif age == 9:
-    ("You are awsome")
+    messagebox.showinfo(" ","You are awsome")
 elif age >= 6 and age < 12:
-    print("You are a child")
+    messagebox.showinfo(" ","You are a child")
 elif age >= 13 and age < 19:
-    print("You are a teen")
+    messagebox.showinfo(" ","You are a teen")
 elif age >= 20 and age < 64:
-    print("You are an adult")
+    messagebox.showinfo(" ","You are an adult")
 else:
-    print("You are a Senior")
+    messagebox.showinfo(" ","You are a Senior")
 # Show the message to the user
 
 window.mainloop()  # Keeps the window open
