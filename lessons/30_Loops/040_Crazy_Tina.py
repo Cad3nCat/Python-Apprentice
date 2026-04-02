@@ -10,22 +10,28 @@ Review the ' Using Lists' section of the previous lesson if you need
 more help
 """
 
-import turtle                           # Tell Python we want to work with the turtle
+import turtle, random                           # Tell Python we want to work with the turtle
 turtle.setup(600,600,0,0)               # Set the size of the window
-
+turtle.bgcolor('black')
 tina = turtle.Turtle()                  # Create a turtle named tina
 
 tina.shape('turtle')                    # Set the shape of the turtle to a turtle
-tina.speed(2)                           # Make the turtle move as fast, but not too fast. 
+tina.speed(0)                           # Make the turtle move as fast, but not too fast. 
 
-forwards = [90, 185, 270, 170, 190, 135, 145, 50]
-lefts = [-870, 730, -180, 280, -890, 380, -370, 280]
+
 colors = ['red', 'orange', 'yellow', 'green', 'blue', 'purple', 'tan', 'magenta']
 
-for  i in range(8):
-
-    tina.color(colors[i])
-    tina.forward(forwards[i])
-    tina.left(lefts[i])
-
+for  i in range(random.randint(500, 1000)):
+    randomForward = random.randint(1, 100)
+    randomLeft = random.randint(1, 100)
+    tina.color(random.choice(colors))
+    tina.forward(randomForward)
+    tinaX = tina.xcor()
+    tinaY = tina.ycor()
+   
+    if tinaX >= 300 or tinaX <=-300:
+        tina.undo()
+    if tinaY >= 300 or tinaY <= -300:
+        tina.undo()
+    tina.left(randomLeft)
 turtle.exitonclick()  
