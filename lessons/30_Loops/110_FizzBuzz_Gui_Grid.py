@@ -5,9 +5,9 @@ We're going to use a Windowing library, guizero, to create a 10x10 grid of
 numbers, with each number in a separate cell, but we're also going to set the
 color of the number based on the following rules:
 
-* If the number is evenly divisible by 5, print '🦡'
+* If th number is evenly divisible by 5, print '🦡'
 * If the number is evenly divisible by 3, print '🍄'
-* If the number is evenly divisible by 15, print '🐍'
+* If thee number is evenly divisible by 15, print '🐍'
 * If it is divisible by neither, print the number.
 
 Additionally, If you are displaying a number  color the numbers as follows:
@@ -34,7 +34,16 @@ app = App("Numbers Grid", layout="grid")
 
 # Create a 10x10 grid using nested loops
 # Or you can use a single loop and calculate the row and column
+for col in range (10):
+    for row in range (1, 11):    
+        print(row + 10*col, end= ' ')
+        Text(app, text=str(row + 10*col) , grid=[row, col], color="red" )
+        if (row + 10*col) %15 == 0:
+            
 
+        
+    print()
+            
 # In the loop, calculate or increment the number
 
 # Use % determining the display, using FizzBuzz rules

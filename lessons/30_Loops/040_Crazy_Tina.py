@@ -21,7 +21,7 @@ tina.speed(0)                           # Make the turtle move as fast, but not 
 
 colors = ['red', 'orange', 'yellow', 'green', 'blue', 'purple', 'tan', 'magenta']
 
-for  i in range(random.randint(500, 1000)):
+for  i in range(random.randint(1000, 5000)):
     randomForward = random.randint(1, 100)
     randomLeft = random.randint(1, 100)
     tina.color(random.choice(colors))
