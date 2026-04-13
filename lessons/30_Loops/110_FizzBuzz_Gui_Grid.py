@@ -37,11 +37,24 @@ app = App("Numbers Grid", layout="grid")
 for col in range (10):
     for row in range (1, 11):    
         print(row + 10*col, end= ' ')
-        Text(app, text=str(row + 10*col) , grid=[row, col], color="red" )
+        s = str(row + 10*col)
+        if len(s) > 1:
+            a = s[0] + s[1]
+            a = int(a)
+        else:
+            a = s[0]
+            a = int(a)
         if (row + 10*col) %15 == 0:
-            
-
-        
+            Text(app, text='🐍' , grid=[row, col],)
+        elif (row + 10*col) %3 == 0:
+            Text(app, text='🍄' , grid=[row, col],)
+        elif (row + 10*col) %5 == 0:
+            Text(app, text='🦡' , grid=[row, col],)
+        elif a % 2 == 0:
+            Text(app, text=str(row + 10*col) , grid=[row, col], color="blue" )
+        else:
+            Text(app, text=str(row + 10*col) , grid=[row, col], color="red" )
+            print( )       
     print()
             
 # In the loop, calculate or increment the number
