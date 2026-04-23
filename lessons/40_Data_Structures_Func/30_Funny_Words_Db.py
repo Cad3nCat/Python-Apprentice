@@ -36,12 +36,13 @@ def add_definition(db, key, value):
 
     If there are already 5 items in the database, an error message is displayed and the new item is not added.
     """
-
+    if len[db] == 5:
+        TextBox.
     # Check the limit
 
     # Set the item in the database
 
-    pass
+        pass
 
 
 def delete_definition(db, key):

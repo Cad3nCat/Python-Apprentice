@@ -29,7 +29,7 @@ Use the ask_integer function to get the user's guess, like this:
 Note: The prompts and output for your program will be in the teminal
 at the bottom of the editor screen; this program does not use the GUI.
 """
-
+from tkinter import messagebox
 import random
 
 def ask_integer(prompt):
@@ -42,14 +42,26 @@ def ask_integer(prompt):
 
 # Pick the random number
 
+while True:
+    ranNum = random.randint(1, 100)
+    if ranNum % 7 != 0:
+        break
+print(ranNum)
 # In your loop:
+while True:
 
     # Get the user's guess
-
+    userGuess = ask_integer("Guess a number between 1 and 100")
     # If the user's guess is divisible by 7, tell the user to start over
-
+    if userGuess % 7 == 0:
+        print("Start over")
     # If the user's guess is too high, tell the user
-
+    elif userGuess > ranNum:
+        print("Too high")
     # If the user's guess is too low, tell the user
-    
+    elif userGuess < ranNum:
+        print("Too low")
     # If the user's guess is correct, tell the user and break out of the loop
+    else:
+        print("You Win")
+        break
