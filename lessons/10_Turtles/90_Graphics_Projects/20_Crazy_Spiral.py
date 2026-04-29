@@ -25,8 +25,8 @@ turtle.setup(600,600,0,0)               # Set the size of the window
 window = turtle.Screen()
 
 baseSize = 200  # the size of the black part of the star
-flameSize = 130  # the length of the flaming arms
-num_shapes = 8
+flameSize = 10  # the length of the flaming arms
+num_shapes = 10
 
 t = turtle.Turtle() 
 
@@ -40,10 +40,10 @@ def make_a_shape(t):
     """Make a shape with turtle t. Make it go left or right or forward"""    
     ...
     for i in range(25):
-        t.forward(10)
-        t.right(90)
-        t.forward(15)
-        t.left(100)
+        t.forward(-10)
+        t.right(-200)
+        t.forward(30)
+        t.left(-400)
 
 for i in range(1500):
     make_a_shape(t)

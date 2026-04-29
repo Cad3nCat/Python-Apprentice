@@ -47,9 +47,9 @@ elif age >= 6 and age < 12:
 elif age >= 13 and age < 19:
     messagebox.showinfo(" ","You are a teen")
 elif age >= 20 and age < 64:
-    messagebox.showinfo(" ","You are an adult")
+    messagebox.showinfo(" ","You are an old fart")
 else:
-    messagebox.showinfo(" ","You are a Senior")
+    messagebox.showinfo(" ","You are super old")
 # Show the message to the user
 
 window.mainloop()  # Keeps the window open
