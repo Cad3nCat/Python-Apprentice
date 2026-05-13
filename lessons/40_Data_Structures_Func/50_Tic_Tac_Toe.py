@@ -15,8 +15,14 @@ def check_row(l):
     Returns:
         The winner's token ( x or o ) if there is one, otherwise None
         """
-
-    return None
+    x_win = [X_MARK, X_MARK, X_MARK]
+    o_win = [O_MARK, O_MARK, O_MARK]
+    if l == x_win:
+        return X_MARK
+    elif l == o_win:
+        return O_MARK
+    else:
+        return None
 
 def check_win(board):
     """Check if a player has won on a board
