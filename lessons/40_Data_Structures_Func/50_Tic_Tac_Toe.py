@@ -15,11 +15,14 @@ def check_row(l):
     Returns:
         The winner's token ( x or o ) if there is one, otherwise None
         """
-    x_win = [X_MARK, X_MARK, X_MARK]
-    o_win = [O_MARK, O_MARK, O_MARK]
-    if l == x_win:
+    x_win = (X_MARK, X_MARK, X_MARK)
+    o_win = (O_MARK, O_MARK, O_MARK)
+    x_win_tuple = [X_MARK, X_MARK, X_MARK]
+    o_win_tuple = [O_MARK, O_MARK, O_MARK]
+
+    if l == x_win or l == x_win_tuple:
         return X_MARK
-    elif l == o_win:
+    elif l == o_win or l == o_win_tuple:
         return O_MARK
     else:
         return None
@@ -32,8 +35,30 @@ def check_win(board):
     Returns:
         The winner's token ( x or o ) if there is one, otherwise None
     """
-
-    return None
+    for i in range(3):
+        win = check_row(board[i])
+        if win != None:
+            return win
+    diagonal1 = [board[0][0], board[1][1], board[2][2]]
+    diagonal2 = [board[0][2], board[1][1], board[2][0]]
+    win = check_row(diagonal1)
+    if win != None:
+        return win
+    win = check_row(diagonal2)
+    if win != None:
+        return win
+    board = list(zip(*board))
+    print(board)
+    win = check_row(board[0])
+    if win != None:
+        return win 
+    win = check_row(board[1])
+    if win != None:
+        return win
+    win = check_row(board[2])
+    if win != None:
+        return win
+    
 
 # The following code is the main part of the program. It creates a GUI for the
 # game and handles the game logic. Implement the functions above first, then
