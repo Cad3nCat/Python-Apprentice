@@ -31,15 +31,19 @@ num_shapes = 10
 t = turtle.Turtle() 
 
 t.shape("turtle") 
-
+t.penup()
+t.goto(230, 230)
+t.pendown()
 t.width(2) 
-
 t.speed(0)
+
+#perfect numbers = 7, 16, 25
+
 
 def make_a_shape(t):
     """Make a shape with turtle t. Make it go left or right or forward"""    
     ...
-    for i in range(25):
+    for i in range(7):
         t.forward(-10)
         t.right(-200)
         t.forward(30)

@@ -29,7 +29,7 @@ t = turtle.Turtle()
 
 t.shape("turtle") 
 
-t.width(2) 
+t.width(1) 
 
 t.speed(0) 
 
