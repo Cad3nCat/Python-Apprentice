@@ -9,9 +9,9 @@ def what_to_do():
         return 1
 
 def find_Avalible_Room():
-    guest_name = ask_res_name()
     for i in len(avalibility):
-        if avalibility[i] != rooms[i] and guests[i]
+        if avalibility[i] != rooms[i] and guests[i]:
+            return i
     
 def ask_res_name():
     name = input("what's your name?")
@@ -21,19 +21,16 @@ def ask_res_nights():
     night = int(input("how many nights do you want to stay?"))
     return night
 
-nights = ask_res_nights()
-
-def price_for_res():
-    price = nights * 100
+def price_for_res(res_nights):
+    price = res_nights * 100
     return price
 
-
-whatToDoAnswer = what_to_do()
-
-
+def assign_res_with_room__tell_price():
+    guest_name = ask_res_name()
+    nights = ask_res_nights()
+    price = price_for_res(nights)
+    print("you must pay $", price, "or you will go to prison for life and be excecuted painfully")
+    room_number = find_Avalible_Room()
+    avalibility[room_number] = guest_name, nights
 
 #room: avalible? unavalible?
-
-
-
-
